@@ -2,7 +2,7 @@ package pl.aczek.exchange.account.domain
 
 
 import pl.aczek.exchange.account.dto.ExchangeRequest
-import pl.aczek.exchange.exchange.rate.ExchangeRate
+import pl.aczek.exchange.rate.ExchangeRate
 import spock.lang.Specification
 
 class AccountsTest extends Specification {

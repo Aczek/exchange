@@ -13,7 +13,7 @@ import pl.aczek.exchange.account.dto.ExchangeRequest;
 import pl.aczek.exchange.account.exception.CurrencyAccountNotFoundException;
 import pl.aczek.exchange.account.exception.InsufficientFundsException;
 import pl.aczek.exchange.account.exception.InvalidOperationException;
-import pl.aczek.exchange.exchange.rate.ExchangeRate;
+import pl.aczek.exchange.rate.ExchangeRate;
 
 @Builder
 @Getter

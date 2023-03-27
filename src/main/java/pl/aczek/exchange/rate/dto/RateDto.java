@@ -1,4 +1,4 @@
-package pl.aczek.exchange.exchange.rate.dto;
+package pl.aczek.exchange.rate.dto;
 
 import java.math.BigDecimal;
 import lombok.Getter;

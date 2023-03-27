@@ -1,4 +1,4 @@
-package pl.aczek.exchange.exchange.rate.exception;
+package pl.aczek.exchange.rate.exception;
 
 public class ExchangeRateNotFoundException extends RuntimeException {
 

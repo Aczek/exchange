@@ -16,8 +16,8 @@ import pl.aczek.exchange.account.dto.AccountCreationRequest;
 import pl.aczek.exchange.account.dto.ExchangeRequest;
 import pl.aczek.exchange.account.exception.AccountAlreadyExistsException;
 import pl.aczek.exchange.account.exception.AccountNotFoundException;
-import pl.aczek.exchange.exchange.rate.ExchangeClient;
-import pl.aczek.exchange.exchange.rate.ExchangeRateRequest;
+import pl.aczek.exchange.rate.ExchangeClient;
+import pl.aczek.exchange.rate.ExchangeRateRequest;
 
 @Service
 @RequiredArgsConstructor

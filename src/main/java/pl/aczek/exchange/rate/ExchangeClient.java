@@ -1,4 +1,4 @@
-package pl.aczek.exchange.exchange.rate;
+package pl.aczek.exchange.rate;
 
 import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 import io.github.resilience4j.retry.annotation.Retry;
@@ -10,8 +10,8 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.client.WebClient;
-import pl.aczek.exchange.exchange.rate.dto.ExchangeClientResponseDto;
-import pl.aczek.exchange.exchange.rate.exception.ExchangeRateNotFoundException;
+import pl.aczek.exchange.rate.dto.ExchangeClientResponseDto;
+import pl.aczek.exchange.rate.exception.ExchangeRateNotFoundException;
 import reactor.core.publisher.Mono;
 
 @Component

@@ -1,4 +1,4 @@
-package pl.aczek.exchange.exchange.rate;
+package pl.aczek.exchange.rate;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;

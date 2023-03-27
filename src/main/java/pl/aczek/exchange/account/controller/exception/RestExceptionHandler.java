@@ -1,4 +1,4 @@
-package pl.aczek.exchange.controller.exception;
+package pl.aczek.exchange.account.controller.exception;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
@@ -11,7 +11,7 @@ import pl.aczek.exchange.account.exception.AccountNotFoundException;
 import pl.aczek.exchange.account.exception.CurrencyAccountNotFoundException;
 import pl.aczek.exchange.account.exception.InsufficientFundsException;
 import pl.aczek.exchange.account.exception.InvalidOperationException;
-import pl.aczek.exchange.exchange.rate.exception.ExchangeRateNotFoundException;
+import pl.aczek.exchange.rate.exception.ExchangeRateNotFoundException;
 
 @RestControllerAdvice
 @Slf4j

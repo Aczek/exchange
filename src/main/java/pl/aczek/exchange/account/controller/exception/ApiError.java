@@ -1,4 +1,4 @@
-package pl.aczek.exchange.controller.exception;
+package pl.aczek.exchange.account.controller.exception;
 
 import lombok.Builder;
 import lombok.Getter;

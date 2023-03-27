@@ -1,4 +1,4 @@
-package pl.aczek.exchange.controller;
+package pl.aczek.exchange.account.controller;
 
 import jakarta.validation.Valid;
 import java.util.UUID;

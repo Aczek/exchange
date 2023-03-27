@@ -2,6 +2,8 @@ package pl.aczek.exchange.exchange.rate
 
 
 import pl.aczek.exchange.account.dto.ExchangeRequest
+import pl.aczek.exchange.rate.ExchangeClient
+import pl.aczek.exchange.rate.ExchangeRateRequest
 import spock.lang.Specification
 
 

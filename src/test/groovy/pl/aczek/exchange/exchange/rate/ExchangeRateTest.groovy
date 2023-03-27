@@ -1,6 +1,7 @@
 package pl.aczek.exchange.exchange.rate
 
 import pl.aczek.exchange.account.dto.ExchangeRequest
+import pl.aczek.exchange.rate.ExchangeRate
 import spock.lang.Specification
 
 import java.math.RoundingMode

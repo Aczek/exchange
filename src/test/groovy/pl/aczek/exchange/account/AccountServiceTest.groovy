@@ -10,9 +10,9 @@ import pl.aczek.exchange.account.data.CurrencyAccountEmbed
 import pl.aczek.exchange.account.domain.Owner
 import pl.aczek.exchange.account.dto.AccountCreationRequest
 import pl.aczek.exchange.account.dto.ExchangeRequest
-import pl.aczek.exchange.exchange.rate.ExchangeClient
-import pl.aczek.exchange.exchange.rate.ExchangeRate
-import pl.aczek.exchange.exchange.rate.ExchangeRateRequest
+import pl.aczek.exchange.rate.ExchangeClient
+import pl.aczek.exchange.rate.ExchangeRate
+import pl.aczek.exchange.rate.ExchangeRateRequest
 import spock.lang.Specification
 
 @SpringBootTest
