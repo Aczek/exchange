@@ -1,0 +1,52 @@
+databaseChangeLog:
+  - changeSet:
+      id: 0
+      author: Aczek
+      changes:
+        - createTable:
+            remarks: A String
+            schemaName: public
+            tableName: account
+            tablespace: pg_default
+            columns:
+              - column:
+                  name: account_id
+                  type: uuid
+              - column:
+                  name: first_name
+                  type: varchar(255)
+              - column:
+                  name: last_name
+                  type: varchar(255)
+        - addPrimaryKey:
+            clustered: true
+            columnNames: account_id
+            constraintName: pk_account
+            schemaName: public
+            tableName: account
+            tablespace: pg_default
+            validate: true
+        - createTable:
+            remarks: A String
+            schemaName: public
+            tableName: currency_account
+            tablespace: pg_default
+            columns:
+              - column:
+                  name: currency
+                  type: varchar(5)
+              - column:
+                  name: balance
+                  type: numeric
+              - column:
+                  name: account_id
+                  type: uuid
+        - addForeignKeyConstraint:
+            baseColumnNames: account_id
+            baseTableName: currency_account
+            baseTableSchemaName: public
+            constraintName: fk_account
+            referencedColumnNames: account_id
+            referencedTableName: account
+            referencedTableSchemaName: public
+            validate: true
