@@ -6,6 +6,7 @@ import java.util.Optional;
 import java.util.UUID;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.validation.annotation.Validated;
 import pl.aczek.exchange.account.data.AccountEntity;
 import pl.aczek.exchange.account.data.AccountMapper;
 import pl.aczek.exchange.account.data.AccountRepository;
@@ -21,6 +22,7 @@ import pl.aczek.exchange.rate.ExchangeRateRequest;
 
 @Service
 @RequiredArgsConstructor
+@Validated
 public class AccountService {
 
   private static final String BASE_CURRENCY_CODE = "PLN";
