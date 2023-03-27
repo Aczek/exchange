@@ -1,6 +1,5 @@
 package pl.aczek.exchange.account.controller;
 
-import jakarta.validation.Valid;
 import java.util.UUID;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,6 +12,7 @@ import pl.aczek.exchange.account.dto.AccountCreationRequest;
 import pl.aczek.exchange.account.dto.AccountCreationResponse;
 import pl.aczek.exchange.account.dto.AccountDto;
 import pl.aczek.exchange.account.dto.ExchangeRequest;
+import pl.aczek.exchange.account.dto.ExchangeRequestDto;
 
 @RestController
 @RequiredArgsConstructor
@@ -37,7 +37,8 @@ public class AccountController {
 
   @PostMapping("/account/{id}/exchange")
   public AccountDto exchange(@PathVariable("id") UUID accountId,
-      @Valid @RequestBody ExchangeRequest exchangeRequest) {
+      @RequestBody ExchangeRequestDto exchangeRequestDto) {
+    ExchangeRequest exchangeRequest = ExchangeRequest.from(exchangeRequestDto);
     final var acc = accountService.exchange(accountId, exchangeRequest);
     return AccountDto.from(acc);
   }

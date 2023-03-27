@@ -10,6 +10,7 @@ import pl.aczek.exchange.account.exception.AccountAlreadyExistsException;
 import pl.aczek.exchange.account.exception.AccountNotFoundException;
 import pl.aczek.exchange.account.exception.CurrencyAccountNotFoundException;
 import pl.aczek.exchange.account.exception.InsufficientFundsException;
+import pl.aczek.exchange.account.exception.InvalidCurrencySymbolException;
 import pl.aczek.exchange.account.exception.InvalidOperationException;
 import pl.aczek.exchange.rate.exception.ExchangeRateNotFoundException;
 
@@ -63,6 +64,14 @@ public class RestExceptionHandler {
   public ApiError invalidOperationExceptionHandler(InvalidOperationException ex,
       WebRequest webRequest) {
     log.error("Insufficient funds on currency account, ex {}, request {}", ex, webRequest, ex);
+    return ApiError.from(ex);
+  }
+
+  @ExceptionHandler(value = InvalidCurrencySymbolException.class)
+  @ResponseStatus(code = HttpStatus.FORBIDDEN)
+  public ApiError illegalArgumentException(InvalidCurrencySymbolException ex,
+      WebRequest webRequest) {
+    log.error("invalid currencies, ex {}, request {}", ex, webRequest, ex);
     return ApiError.from(ex);
   }
 
